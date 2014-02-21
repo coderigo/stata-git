@@ -48,7 +48,7 @@ List all repositories managed by `git`
 git list
 ```
 
-## Creating a git repository containing a Stata module}
+## Creating a git repository containing a Stata module
 
 A few handy tips to make it work best `git`:
 
