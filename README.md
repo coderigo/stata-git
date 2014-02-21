@@ -1,6 +1,9 @@
 ## Description
 Manages [git](http://git-scm.org) repositories in Stata. It installs, updates, lists and removes git repositories containing Stata user-written programs. An alternative to sharing through `ssc` or `net`
 
+## Requirements
+[git](http://git-scm.org) must be installed and accessible from your command line.
+
 ## Installation
 
 ### Manually (safest until published on ssc)
