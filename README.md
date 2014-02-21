@@ -49,7 +49,7 @@ git list
 
 A few handy tips to make it work best `git`:
 
-1. Use the snake-case format for your repository name and prefix it with "stata". For example, if your program _helloWorld_, your repository should be called _stata-hello-world_.
+1. Use the _snake-case_ format for your repository name and prefix it with "stata". For example, if your program is called _helloWorld_, your repository should be called _stata-hello-world_.
 
 2. Use the _camelCase_ format for your program name and any installable other auxiliary files including the _.sthlp_ file.
 
