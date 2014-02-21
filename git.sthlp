@@ -8,6 +8,11 @@
 {p2col :{hi: git} {hline 2}}Manage git repositories through a series of basic commands. It installs, updates, lists and removes git repositories containing Stata user-written programs. An alternative to sharing through {cmd: ssc} or {cmd: net}{p_end}
 {p2colreset}{...}
 
+{title:Author}
+
+{pstd}
+Rodrigo Martell {opt rodrigo.martell@gmail.com}. Github - {opt github.com/coderigo/stata-git}.{p_end}
+
 
 {title:Syntax}
 
