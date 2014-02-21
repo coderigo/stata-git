@@ -49,13 +49,13 @@ git list
 
 A few handy tips to make it work best `git`:
 
-1. Use the snake-case format for your repository name and prefix it with "stata". For example, if your program {it: helloWorld}, your repository should be called {it:stata-hello-world}.{p_end}
+1. Use the snake-case format for your repository name and prefix it with "stata". For example, if your program _helloWorld_, your repository should be called _stata-hello-world_.
 
-2. Use the {it: camelCase} for your program name and any installable other auxiliary files including the {it: .sthlp} file.{p_end}
+2. Use the _camelCase_ format for your program name and any installable other auxiliary files including the _.sthlp_ file.
 
-3. Place all the files you want to be copied over in the root of your repository.{p_end}
+3. Place all the files you want to be copied over in the root of your repository.
 
-4. It works nicely (and it's easier for community collaboration) if you host your repository on a public repo like {it:github}{p_end}.
+4. It works nicely (and it's easier for community collaboration) if you host your repository on a public repo like _github_.
 
 ## Contributing
 Happy to take requests.
