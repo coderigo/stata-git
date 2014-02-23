@@ -15,7 +15,7 @@ In Stata, type:
 
 `ssc install git`
 
-After this you can keep `git` itself updated using `git` by typing `git update git`
+After this you can keep `git` itself updated by uninstalling the ssc version and using `git` to update itself - `git update git`
 
 
 ## Usage
