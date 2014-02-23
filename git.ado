@@ -57,7 +57,7 @@ syntax anything(name=gitArgs id="git command and arguments")
     if("`gitCommand'" == "install"){
 
         /* Get the name of the repo - Stata has no equivalent to JS (or others) of string split */
-        local repoName     = "`gitParam1'"
+        local repoName     = subinstr("`gitParam1'",".git","",.)
         local separatorPos = strpos("`repoName'","/")
         while `separatorPos' > 0 {
             local repoName     = trim(substr("`repoName'", `separatorPos'+1, length("`repoName'")-`separatorPos'))
