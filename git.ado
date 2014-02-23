@@ -8,9 +8,10 @@ syntax anything(name=gitArgs id="git command and arguments")
      * This requires that you have git installed and accessible through the command line.
      * For instructions on installing git, see: http://git-scm.com/downloads
     */
-    di as red "WARNING:"
-    di as red "This program requires git to be accessible through the command line."
-    di as red "See http://git-scm.com/downloads"
+    di as yellow "------ WARNING:---------"
+    di as yellow " This program requires git to be accessible through the command line."
+    di as yellow " See http://git-scm.com/downloads"
+    di as yellow "------------------------"
     /*
     OS-dependent vars
     */
