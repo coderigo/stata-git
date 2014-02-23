@@ -6,11 +6,11 @@ Manages [git](http://git-scm.org) repositories in Stata. It installs, updates, l
 
 ## Installation
 
-### Manually (safest until published on ssc)
+### Manually
 1. Clone this repo
 2. Copy the `.ado` and `.sthlp` file to your [personal ado directory](http://www.stata.com/support/faqs/programming/personal-ado-directory/) under the `g` directory (create it if it does not exist).
 
-### Using ssc (TBC)
+### Using ssc
 In Stata, type:
 
 `ssc install git`
