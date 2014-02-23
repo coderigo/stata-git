@@ -6,17 +6,18 @@ Manages [git](http://git-scm.org) repositories in Stata. It installs, updates, l
 
 ## Installation
 
-### Manually
-1. Clone this repo
-2. Copy the `.ado` and `.sthlp` file to your [personal ado directory](http://www.stata.com/support/faqs/programming/personal-ado-directory/) under the `g` directory (create it if it does not exist).
+### Manually (recommended)
+
+1. Create a directory called `git` in the same directory where your [personal ado directory](http://www.stata.com/support/faqs/programming/personal-ado-directory/) lives (i.e. make it a sibbling of your personal `ado` directory.
+2. Clone this repo into the directory from **step 1** : `cd my/personal/directory/git && git clone https://github.com/coderigo/stata-git stata-git`
+3. Copy the `.ado` and `.sthlp` files from the cloned repo from **step 2** to your [personal ado directory](http://www.stata.com/support/faqs/programming/personal-ado-directory/) under the `g` directory (create it if it does not exist).
 
 ### Using ssc
 In Stata, type:
 
 `ssc install git`
 
-After this you can keep `git` itself updated by uninstalling the ssc version and using `git` to update itself - `git update git`
-
+**Note**: keeping stata-git up to date with the changes in this GitHub repo is easier if you install it the manual way as updates to this repo are pretty much available instantly whereas `ssc` updates can take up to a few days to get ticked through.
 
 ## Usage
 
