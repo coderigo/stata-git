@@ -54,6 +54,12 @@ syntax anything(name=gitArgs id="git command and arguments")
     }
     local gitParam1  = trim(subinstr("`gitArgs'","`gitCommand'","",1))
 
+    if("`gitCommand'" != "install" & "`gitCommand'" != "uninstall" & "`gitCommand'" != "update" & "`gitCommand'" != "list"){
+        di as red "`gitCommand' is not a valid git command"
+        di as yellow "Expected one of: install, uninstal, update, list."
+        exit
+    }
+
     /* Translate "install" to "clone". "install" is used to be consistent with the ssc command */
     if("`gitCommand'" == "install"){
 
