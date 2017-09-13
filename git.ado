@@ -1,4 +1,4 @@
-*! version 1.0
+*! version 1.1
 version 12.0
 capture program drop git
 program define git
