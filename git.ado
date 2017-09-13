@@ -34,12 +34,11 @@ syntax anything(name=gitArgs id="git command and arguments")
         local rmdirCmd  = "rmdir /Q /S"
     }
 
-    /*
-    Make the git program dir if not there and cd to it
-     */
-    capture confirm file "`gitDir'"
+    /* Make the git program dir if not there and cd to it */
+    /* use /nul to deal with the directory as it would be a file (for stata) */
+    capture confirm file "`gitDir'/nul"
     if _rc!=0{
-        mkdir "`gitDir'"
+        capture mkdir "`gitDir'"
     }
     qui cd "`gitDir'"
 
@@ -81,9 +80,9 @@ syntax anything(name=gitArgs id="git command and arguments")
 
         /* Create the repo */
         local repoDir = "`gitDir'`repoName'/"
-        capture confirm file "`repoDir'"
+        capture confirm file "`repoDir'/nul"
         if _rc!=0{
-            mkdir "`repoDir'"
+            capture mkdir "`repoDir'"
         }
         else{
             /* Return to old directory */
@@ -97,9 +96,9 @@ syntax anything(name=gitArgs id="git command and arguments")
         /* Copy all .ado and .sthlp files to the right directory */
         local programFirstLetter = lower(substr(subinstr("`repoName'","stata-","",.),1,1))
         local programDir         = "../ado/plus/`programFirstLetter'/"
-        capture confirm file "`programDir'"
+        capture confirm file "`programDir'/nul"
         if _rc!=0{
-            mkdir "`programDir'"
+            capture mkdir "`programDir'"
         }
         qui cd "`repoName'"
         shell `copyCmd' *.ado "`adoPlusDir'`programFirstLetter'"
@@ -144,7 +143,7 @@ syntax anything(name=gitArgs id="git command and arguments")
 
         /* Uninstall nukes all */
         if("`gitCommand'" == "uninstall"){
-            capture confirm file "`repoName'"
+            capture confirm file "`repoName'/nul"
             if _rc!=0{
                 di as red "-`commandCamelCase'- not installed via -git- command"
             }
